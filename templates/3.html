@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>three</title>
+    <style> h1{
+        background-color: green;
+        color: yellow;
+        font-size: 100px; 
+        text-align: center;
+            position: absolute;
+            padding-top: 0px ;
+            padding-left:  600px;
+        padding-right: 400px;
+          }
+        body{
+            background-color: lemonchiffon;
+        }
+        .ima1{
+         height: 150px;
+        width: 150px;
+        position: absolute; /* Position the image absolutely */
+        top: 60px; /* Align to the top */
+        left: 50px; /* Align to the left */
+    }
+    
+    h4{
+     color: chocolate; 
+            font-size: 50px; 
+            text-align: center; 
+            text-shadow: 2px 2px 4px rgb(0, 0, 0.5);
+        position: absolute; 
+        top: 130px;                           
+        left: 550px; 
+    }
+    .about{
+      text-align: justify;
+        align-content: center;
+        font-size: 40px;
+        color: saddlebrown;
+        padding-top: 300px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 70px;
+    }
+      button{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-block: 20px;
+            color: #000000;
+          position: absolute;
+          left: 750px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+<h1 >
+    TO-DO
+</h1>
+<img class="ima1" src="{% static 'logo2.png' %}">
+<h4>What's on your list?</h4>
+<div class="about">Our website's About page provides a brief introduction to our to-do app, designed to streamline task management and enhance productivity for individuals and teams alike. With an intuitive user interface, our app simplifies the process of organizing tasks and prioritizing responsibilities. Users can create, edit, and delete tasks effortlessly, ensuring they stay on top of their commitments. Whether it's managing personal chores, work assignments, or collaborative projects, our to-do app offers customizable features such as categorizing tasks, setting due dates, and receiving notifications for upcoming deadlines. Built with user experience in mind, our app aims to empower users to achieve their goals efficiently and effectively.
+</div> 
+    <td ><button onclick="window.location.href = 'one';"><b> Back </b> </button></td>
+
+</body>
+</html>

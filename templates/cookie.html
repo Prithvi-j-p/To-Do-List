@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Example</title>
+     <style>
+        h1{
+        background-color: green;
+        color: yellow;
+        font-size: 100px; 
+        text-align: center;
+            position: absolute;
+            padding-top: 0px ;
+            padding-left:  600px;
+            top: 0px;
+        padding-right: 400px;
+          }
+         body{
+            background-color: lemonchiffon;
+             text-align: center;
+        }
+        .ima1{
+         height: 150px;
+        width: 150px;
+        position: absolute; /* Position the image absolutely */
+        top: 50px; /* Align to the top */
+        left: 50px; /* Align to the left */
+    }
+         .one-insert {
+            display: flex;
+               flex-direction: column;
+        justify-content: center; /* Center buttons horizontally */
+        margin-top: 0px;
+       border-color: black;
+       padding-top: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>TO-DO</h1>
+<img class="ima1" src="{% static 'logo2.png' %}">
+<div class="one-insert">
+    <h2 style="color: darkolivegreen;">Set Cookie</h2>
+    <form action="set_cookies" method="post">
+      {% csrf_token %}  
+        <button type="submit">Set Cookie</button>
+    </form>
+
+    <h2 style="color: darkolivegreen">Get Cookie</h2>
+    <form action="get_cookies" method="post">
+                 {% csrf_token %}  
+       <p>Current Username: <span id="username"></span></p>
+    <button type="submit">Get Cookie</button>
+    </form>
+    
+
+    <h2 style="color: darkolivegreen">Delete Cookie</h2>
+    <form action="deletecookie" method="post">
+         {% csrf_token %}  
+        <button type="submit">Delete Cookie</button>
+    </form>
+<!--script>
+        function getCookie() {
+            fetch("/get_cookie/")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("username").innerText = data;
+                });
+        }
+    </script-->
+</div>
+   
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>your list</title>
+    <style>
+        h1{
+            font-size: 100px;
+            color: yellow;
+            background-color: green;
+        }
+        tr{
+            font-size:60px ;
+            font-style: italic;
+            color: darkolivegreen;
+        }
+        body{
+            background-color: #f1eab4;
+            align-content: center;
+        }
+        .ima1{
+         height: 150px;
+        width: 150px;
+        position: absolute; /* Position the image absolutely */
+        top: 60px; /* Align to the top */
+        left: 0px; /* Align to the left */
+    }
+        button{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-block: 30px;
+            color: #000000;
+        }
+        marquee{
+            font-size: xx-large;
+            color: darkred;
+            font-style: italic;
+        }
+        a{
+            font-size: 20px;
+            color: black;
+        }
+        </style>
+    
+</head>
+<body align="center">
+
+<img class="ima1" src="{% static 'logo2.png' %}">
+<div>
+    <h1><b>To Do </b></h1>
+    <hr>
+</div>
+
+<table align="center">
+  <tr>
+      <th>1<sup>st</sup> Week  <a href="weekone">Click HERE </a></th>
+  </tr>
+    <tr>
+    <th>2<sup>nd</sup> Week  <a href="weektwo">Click HERE</a></th>
+    </tr>
+    <tr>
+    <th>3<sup>rd</sup> Week  <a href="weekthree">Click HERE</a></th>
+  </tr>
+   
+    <tr>
+    <th>4<sup>th</sup> Week  <a href="weekfour">Click HERE</a></th>
+  </tr>
+    
+    <td><button onclick="window.location.href = 'one';"><b> Back </b> </button></td>
+    <marquee behavior="scroll" direction="left">"One stop solution for keeping track of your weekly Tasks"</marquee>
+    <hr>
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>four</title>
+    <style>
+        div{
+            font-size: 103px;
+        }
+         button{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-block: 30px;
+            color: #000000;
+        }
+         body{
+             background-color: khaki;
+         }
+          .ima1{
+         height: 150px;
+        width: 150px;
+        position: absolute; /* Position the image absolutely */
+        top: 60px; /* Align to the top */
+        left: 0px; /* Align to the left */
+    }
+    </style>
+</head>
+<body align="center">
+
+   <div style="padding-top: 250px">
+<img class="ima1" src="{% static 'https://wtf.tw/ref/duckett.pdf' %}"><br>
+       <a href=“tel:+919845230576”> Call us </a><br>
+   <a href="mailto:prithvijaiprakash@gmail.com">Send Email</a></div> 
+    <td><button onclick="window.location.href = 'one';"><b> Back </b> </button></td>
+
+
+</body>
+</html>

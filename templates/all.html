@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       h1{
+        background-color: green;
+        color: yellow;
+        font-size: 100px; 
+        text-align: center;
+            position: absolute;
+            padding-top: 0px ;
+            padding-left:  600px;
+            top: 0px;
+        padding-right: 400px;
+          }
+         body{
+            background-color: lemonchiffon;
+        }
+        .ima1{
+         height: 150px;
+        width: 150px;
+        position: absolute; /* Position the image absolutely */
+        top: 50px; /* Align to the top */
+        left: 50px; /* Align to the left */
+    }
+        .one-insert {
+            display: flex;
+        justify-content: center; /* Center buttons horizontally */
+        margin-top: 0px;
+       border-color: black;
+       padding-top: 200px;
+        }
+         table {
+        margin: 0 auto;
+    }
+    
+    /* Increase cell size */
+    td {
+        padding: 20px; /* You can adjust the padding to increase or decrease cell size */
+        background-color: burlywood;
+    }
+        
+    </style>
+</head>
+<body bgcolor="lemonchiffon">
+<h1>TO-DO</h1>
+<img class="ima1" src="{% static 'logo2.png' %}">
+<div class="one-insert">
+    <form action="allrows">
+ <h2 align="center">Table Data</h2>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Week</th>
+            <th>Task</th>
+            <th>Deadline</th>
+            <!-- Add more table headers as needed -->
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row.0 }}</td> <!-- Assuming ID is the first column -->
+            <td>{{ row.1 }}</td>
+            <td>{{ row.2 }}</td>
+            <td>{{ row.3 }}</td>
+            <!-- Add more table cells as needed -->
+        </tr>
+        {% endfor %}</table>
+</form>
+<form action="deleteweekone">
+        <button type="submit">DELETE</button>
+    </form>
+ <form action="one">
+        <button type="submit">Back</button>
+    </form> 
+</div>
+</body>
+</html>

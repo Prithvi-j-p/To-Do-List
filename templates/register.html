@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration page</title>
+    <style>
+        body {
+            background-color: darkgreen;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .reg{
+            background-color: khaki;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        form{
+             display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        button [type="submit"]{
+             background-color: brown;
+            color: wheat;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        h1{
+            color: #e31212;
+        }
+        button{
+            background-color: cadetblue;
+            padding: 15px;
+            font-size: 20px;
+            font-family: "Arial Black";
+        }
+        
+    </style>
+</head>
+<body>
+<div class="reg">
+    <h1><u>Create Account</u></h1>
+    <div class="create">
+    <form action="register" method="post">
+        {% csrf_token %}
+                    <label for="EmailID">Email Address:</label>
+ <input type="text" id="EmailID" name="EmailID">
+                    <label for="Username">Set Username:</label>
+ <input type="text" id="Username" name="Username">
+                    <label for="password">Set Password:</label>
+           <input type="text" id="password" name="password">
+        <br>
+<div class="submit">
+     
+    <button type="submit"><b>Create Account</b></button>
+    </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>
